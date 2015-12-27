@@ -1,0 +1,46 @@
+.center {
+	display: flex;
+	justify-content: center;
+}
+
+.navbar-text {
+	font-size: 14px !important;
+}
+
+.navbar-title {
+	text-transform: none !important;
+	font-size: 30px !important;
+}
+
+.navbar-nav {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-nav li {
+	border-bottom: 4px solid transparent;
+}
+
+.navbar-nav li:hover {
+	border-bottom: 4px solid #99ccff;
+}
+
+.navbar-nav li a {
+	margin: 0 !important;
+}
+
+.navbar-header:hover {
+	border-bottom: 3px solid #99ccff;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+a:link {
+	text-decoration: none;
+}
