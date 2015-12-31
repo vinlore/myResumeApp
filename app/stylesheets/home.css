@@ -4,7 +4,7 @@
 }
 
 .navbar-text {
-	font-size: 14px !important;
+	font-size: 15px !important;
 }
 
 .navbar-title {
@@ -22,15 +22,12 @@
 }
 
 .navbar-nav li:hover {
-	border-bottom: 4px solid #99ccff;
+	border-bottom: 4px solid #047A4A;
+	/*border-bottom: 3px solid #99ccff;*/
 }
 
 .navbar-nav li a {
 	margin: 0 !important;
-}
-
-.navbar-header:hover {
-	border-bottom: 3px solid #99ccff;
 }
 
 a:hover {
@@ -45,7 +42,7 @@ a:link {
 	text-decoration: none;
 }
 
-#intro {
+#profile {
 	background: url('/assets/vancouver.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -56,4 +53,42 @@ a:link {
 .container-white {
 	padding: 25px 0px;
 	background-color: #fff;
+}
+
+.container-blue {
+	background-color: #07346F;
+	padding: 25px 0px;
+	color: white;
+}
+
+.heading {
+	margin-bottom: 18px;
+}
+
+.container-blue h1, 
+.container-blue h2,
+.container-blue h3,
+.container-blue h4,
+.container-blue h5,
+.container-blue h6 {
+	color: white;
+}
+
+#education h4 {
+	margin-top: 10px;
+}
+
+.form-control {
+	color: white;
+	padding-left: 5px !important;
+}
+
+.table-container {
+	height: 300px;
+	overflow-y: scroll;
+}
+
+.table-hover > tbody > tr:hover {
+	cursor: pointer;
+	background-color: #A8A9AD;
 }

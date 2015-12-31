@@ -1,39 +1,88 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="center">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#" class="navbar-text">Technical</a>
-                </li>
-                <li>
-                    <a href="#" class="navbar-text">Education</a>
-                </li>
-                <li>
-                    <a href="#" class="navbar-title">Vincent Lore</a>
-                </li>
-                <li>
-                    <a href="#" class="navbar-text">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#" class="navbar-text">Experience</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-<div class="jumbotron" id="intro">
-	<div class="container">
-	</div>
+    <div class="center">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#" class="navbar-text" ng-click="gotoElement('technical')">Technical</a>
+            </li>
+            <li>
+                <a href="#" class="navbar-text" ng-click="gotoElement('education')">Education</a>
+            </li>
+            <li>
+                <a href="#" class="navbar-title" ng-click="gotoElement('profile')">Vincent Lore</a>
+            </li>
+            <li>
+                <a href="#" class="navbar-text">Portfolio</a>
+            </li>
+            <li>
+                <a href="#" class="navbar-text">Experience</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="jumbotron" id="profile">
+    <div class="container">
+    </div>
 </div>
-<div class="container-white">
+<div class="container-white" id="technical">
+        <h2 class="text-center heading">Technical</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+                <h3>Languages</h3>
+                <div ng-repeat="language in languages">{{language}}</div>
+            </div>
+            <div class="col-xs-3">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-blue" id="education">
+		<h2 class="text-center heading">Education</h2>
 	<div class="container">
-	<h1 class="text-center">Technical</h1>
-	<div class="row">
-		<div class="col-xs-3">
-			<h2>Languages</h2>
-			<div ng-repeat="language in languages">{{language}}</div>
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="row">
+					<div class="col-xs-3">
+						<img class="img-responsive" src="assets/ubc.png"/>
+					</div>
+					<div class="col-xs-9">
+						<h4>University of British Columbia</h4>
+						<h6>Bachelor of Science</h6>
+						<h6>Major in Biochemistry</h6>
+						<h6>Major in Computer Science</h6>
+						<p>September 2011 to May 2016 (Expected)</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="container-fluid">
+					<input type="text" placeholder="Search courses" class="form-control" ng-model="filterCourse">
+					<div class="table-container">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Course</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="course in cpscCourses | filter:filterCourse">
+								<td>{{course.course}}</td>
+								<td>{{course.title}}</td>
+							</tr>
+							<tr ng-repeat="course in biocCourses | filter:filterCourse">
+								<td>{{course.course}}</td>
+								<td>{{course.title}}</td>
+							</tr>
+							<tr ng-repeat="course in chemCourses | filter:filterCourse">
+								<td>{{course.course}}</td>
+								<td>{{course.title}}</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="col-xs-3">
-			
-		</div>
-	</div>
 	</div>
 </div>
