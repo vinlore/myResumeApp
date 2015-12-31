@@ -1,5 +1,5 @@
 angular.module('home.ctrl', [])
-.controller('homeController', function($scope) {
+.controller('homeController', function($scope, anchorSmoothScroll) {
 
 	$scope.languages = [
 		'HTML/CSS', 'Javascript', 'Java', 'SQL', 'Matlab', 'R', 'C++', 'PHP', 'Python' 
@@ -18,5 +18,86 @@ angular.module('home.ctrl', [])
 		'Dot blot',
 		'DNA and protein spectrophotometry'
 	];
+
+	$scope.cpscCourses = [
+		{
+			course: 'CPSC 410',
+			title: 'Advanced Software Engineering'
+		},
+		{
+			course: 'CPSC 404',
+			title: 'Advanced Relational Databases'
+		},
+		{
+			course: 'CPSC 340',
+			title: 'Machine Learning and Data Mining'
+		},
+		{
+			course: 'CPSC 304',
+			title: 'Introduction to Relational Databases'
+		},
+		{
+			course: 'CPSC 320',
+			title: 'Intermediate Algorithm Design and Analysis'
+		},
+		{
+			course: 'CPSC 310',
+			title: 'Introduction to Software Engineering'
+		},
+		{
+			course: 'CPSC 313',
+			title: 'Computer Hardware and Operating Systems'
+		}
+	];
+
+	$scope.biocCourses = [
+		{
+			course: 'BIOC 450',
+			title: 'Membrane Biochemistry'
+		},
+		{
+			course: 'BIOC 410',
+			title: 'Nucleic Acids - Structure and Function'
+		},
+		{
+			course: 'BIOC 403',
+			title: 'Enzymology'
+		},
+		{
+			course: 'BIOC 402',
+			title: 'Proteins - Structure and Function'
+		},
+		{
+			course: 'BIOC 303',
+			title: 'Molecular Biochemistry'
+		},
+		{
+			course: 'BIOC 301',
+			title: 'Biochemistry Laboratory'
+		}
+	];
+
+	$scope.chemCourses = [
+		{
+			course: 'CHEM 335',
+			title: 'Chemistry Integrated Laboratory II'
+		},
+		{
+			course: 'CHEM 315',
+			title: 'Chemistry Integrated Laboratory I'
+		},
+		{
+			course: 'CHEM 313',
+			title: 'Advanced Organic Chemistry for the Life Sciences'
+		},
+		{
+			course: 'CHEM 305',
+			title: 'Biophysical Chemistry'
+		}
+	];
+
+	$scope.gotoElement = function(id) {
+		anchorSmoothScroll.scrollTo(id);
+	}
 
 });

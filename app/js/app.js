@@ -3,7 +3,8 @@
 angular.module('myResumeApp', [
     'ngRoute',
     'ui.bootstrap',
-    'home.ctrl'
+    'home.ctrl',
+    'scrolling'
 ])
 
 .config(function($routeProvider, $locationProvider) {
