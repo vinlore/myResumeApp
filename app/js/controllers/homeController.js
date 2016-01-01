@@ -1,5 +1,5 @@
 angular.module('home.ctrl', [])
-.controller('homeController', function($scope, anchorSmoothScroll) {
+.controller('homeController', function($scope, anchorSmoothScroll, filterFilter) {
 
 	$scope.languages = [
 		'HTML/CSS', 'Javascript', 'Java', 'SQL', 'Matlab', 'R', 'C++', 'PHP', 'Python' 
@@ -19,7 +19,7 @@ angular.module('home.ctrl', [])
 		'DNA and protein spectrophotometry'
 	];
 
-	$scope.cpscCourses = [
+	$scope.courses = [
 		{
 			course: 'CPSC 410',
 			title: 'Advanced Software Engineering'
@@ -47,10 +47,7 @@ angular.module('home.ctrl', [])
 		{
 			course: 'CPSC 313',
 			title: 'Computer Hardware and Operating Systems'
-		}
-	];
-
-	$scope.biocCourses = [
+		},
 		{
 			course: 'BIOC 450',
 			title: 'Membrane Biochemistry'
@@ -74,10 +71,7 @@ angular.module('home.ctrl', [])
 		{
 			course: 'BIOC 301',
 			title: 'Biochemistry Laboratory'
-		}
-	];
-
-	$scope.chemCourses = [
+		},
 		{
 			course: 'CHEM 335',
 			title: 'Chemistry Integrated Laboratory II'
@@ -95,6 +89,12 @@ angular.module('home.ctrl', [])
 			title: 'Biophysical Chemistry'
 		}
 	];
+
+	$scope.catCourses = $scope.courses;
+
+	$scope.coursesByCat = function(sub) {
+		$scope.catCourses = filterFilter($scope.courses, {course: sub});
+	};
 
 	$scope.gotoElement = function(id) {
 		anchorSmoothScroll.scrollTo(id);

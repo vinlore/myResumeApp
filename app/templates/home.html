@@ -24,7 +24,7 @@
     </div>
 </div>
 <div class="container-white" id="technical">
-        <h2 class="text-center heading">Technical</h2>
+    <h2 class="text-center heading">Technical</h2>
     <div class="container">
         <div class="row">
             <div class="col-xs-3">
@@ -37,52 +37,58 @@
     </div>
 </div>
 <div class="container-blue" id="education">
-		<h2 class="text-center heading">Education</h2>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-6">
-				<div class="row">
-					<div class="col-xs-3">
-						<img class="img-responsive" src="assets/ubc.png"/>
-					</div>
-					<div class="col-xs-9">
-						<h4>University of British Columbia</h4>
-						<h6>Bachelor of Science</h6>
-						<h6>Major in Biochemistry</h6>
-						<h6>Major in Computer Science</h6>
-						<p>September 2011 to May 2016 (Expected)</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6">
-				<div class="container-fluid">
-					<input type="text" placeholder="Search courses" class="form-control" ng-model="filterCourse">
-					<div class="table-container">
-					<table class="table table-hover">
-						<thead>
-							<tr>
-								<th>Course</th>
-								<th>Description</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr ng-repeat="course in cpscCourses | filter:filterCourse">
-								<td>{{course.course}}</td>
-								<td>{{course.title}}</td>
-							</tr>
-							<tr ng-repeat="course in biocCourses | filter:filterCourse">
-								<td>{{course.course}}</td>
-								<td>{{course.title}}</td>
-							</tr>
-							<tr ng-repeat="course in chemCourses | filter:filterCourse">
-								<td>{{course.course}}</td>
-								<td>{{course.title}}</td>
-							</tr>
-						</tbody>
-					</table>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <h2 class="text-center heading">Education</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <img class="img-responsive" src="assets/ubc.png" />
+                    </div>
+                    <div class="col-xs-9">
+                        <h4>University of British Columbia</h4>
+                        <h6>Bachelor of Science</h6>
+                        <h6>Major in Biochemistry</h6>
+                        <h6>Major in Computer Science</h6>
+                        <p>September 2011 to May 2016 (Expected)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="container-fluid">
+                    <input type="text" placeholder="Search courses" class="form-control" ng-model="filterCourse">
+                    <!-- <ul class="nav nav-tabs">
+                    	<li id="all" class="active"><a ng-click="coursesByCat('')">ALL</a></li>
+                    	<li id="cpsc"><a ng-click="coursesByCat('cpsc')">CPSC</a></li>
+                    	<li id="bioc"><a ng-click="coursesByCat('bioc')">BIOC</a></li>
+                    	<li id="chem"><a ng-click="coursesByCat('chem')">CHEM</a></li>
+                    </ul> -->
+                    <uib-tabset>
+                        <uib-tab heading="ALL" active="tab.active" select="coursesByCat('')"></uib-tab>
+                        <uib-tab heading="CPSC" select="coursesByCat('cpsc')"></uib-tab>
+                        <uib-tab heading="BIOC" select="coursesByCat('bioc')"></uib-tab>
+                        <uib-tab heading="CHEM" select="coursesByCat('chem')"></uib-tab>
+                    </uib-tabset>
+                    <table class="table table-hover no-margin">
+                        <thead>
+                            <tr>
+                                <th class="courseCol">Course</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="table-container margin-top">
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr ng-repeat="course in catCourses | filter:filterCourse">
+                                    <td class="courseCol">{{course.course}}</td>
+                                    <td>{{course.title}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
