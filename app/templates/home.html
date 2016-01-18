@@ -27,11 +27,11 @@
     <h2 class="text-center heading">Technical</h2>
     <div class="container">
         <div class="row">
-            <div class="col-xs-3">
+            <div class="col-xs-6">
                 <h3>Languages</h3>
                 <div ng-repeat="language in languages">{{language}}</div>
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-6">
             </div>
         </div>
     </div>
@@ -87,17 +87,24 @@
     </div>
 </div>
 <div class="container-white" id="portfolio">
-	<h2 class="text-center heading">Portfolio</h2>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-7">
+    <h2 class="text-center heading">Portfolio</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-7">
                 <h4>Datapi Registration App</h4>
-                <p>A web application designed for managing student registration and payments. As well as generating various summary reports. Built using AngularJS, Bootstrap CSS, Angular Bootstrap, and Firebase.</p>
+                <p>A web application designed for managing student registration and payments.</p>
+                <ul>
+                    <li>Register new clients to the database</li>
+                    <li>Make and edit payments in the database</li>
+                    <li>Make changes to existing client information</li>
+                    <li>Compiling monthly, weekly, daily reports. WIP</li>
+                </ul>
+                <p>Built with AngularJS, Bootstrap CSS, Angular Bootstrap, and Firebase.</p>
             </div>
             <div class="col-xs-5">
-                <img src=""/>
+                <img src="" />
             </div>
-		</div>
+        </div>
         <div class="row">
             <div class="col-xs-7">
                 <h4>Yippee</h4>
@@ -111,11 +118,48 @@
                     <li>Send messages to friends</li>
                     <li>Share businesses with friends</li>
                 </ul>
-                <p>Built using Ionic framework, Cordova plugins, Ionic material CSS, Yelp API, OpenStreetMap, Firebase</p>
+                <p>Built with Ionic framework, Cordova plugins, Ionic material CSS, Yelp API, OpenStreetMap, Firebase.
+                <br>Tested using Karma with Jasmine, automated on TravisCI.</p>
             </div>
             <div class="col-xs-5">
-                <img src=""/>
+                <img src="" />
             </div>
         </div>
-	</div>
+        <div class="row">
+            <div class="col-xs-7">
+                <h4>NHLCap</h4>
+                <p>A simple web database application for viewing the cap salaries of players in the NHL.
+                    <br> Built with AngularJS, PHP, and MySQL.</p>
+            </div>
+            <div class="col-xs-5">
+                <img src="" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-blue" id="experience">
+    <h2 class="text-center heading">Work Experience</h2>
+    <div class="container">
+        <div class="col-xs-6">
+            <div class="row">
+                <h4>Tutor & Developer @ Datapi Learning Centre</h4>
+                <h6>772 Kingsway, Vancouver, BC</h6>
+                <h6>September, 2015 to Present</h6>
+                <ul>
+                    <li>Tutoring students K-12 1-on-1 or 1-on-2</li>
+                    <li>Developing a web application for managing clients</li>
+                    <li>Making incremental changes on currently existing software system</li>
+                </ul>
+            </div>
+            <div class="row">
+                <h4>Lab Volunteer @ Rideout Lab</h4>
+                <h6>2350 Health Sciences Mall, Vancouver, BC</h6>
+                <h6>August, 2015 to Present</h6>
+                <ul>
+                    <li>Regular housekeeping tasks</li>
+                    <li>Developing R scripts to process RNAseq data</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
