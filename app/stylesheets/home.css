@@ -136,3 +136,10 @@ tbody > tr:first-of-type > td {
 .courseCol {
 	width: 110px;
 }
+
+.link-out {
+	color: white;
+	font-size: 15px;
+	top: -1px;
+	margin-left: 5px;
+}
