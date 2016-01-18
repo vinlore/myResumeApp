@@ -89,47 +89,14 @@
 <div class="container-white" id="portfolio">
     <h2 class="text-center heading">Portfolio</h2>
     <div class="container">
-        <div class="row">
+        <div class="row" ng-repeat="p in projects">
             <div class="col-xs-7">
-                <h4>Datapi Registration App</h4>
-                <p>A web application designed for managing student registration and payments.</p>
+                <h4>{{p.name}}</h4>
+                <p>{{p.description}}</p>
                 <ul>
-                    <li>Register new clients to the database</li>
-                    <li>Make and edit payments in the database</li>
-                    <li>Make changes to existing client information</li>
-                    <li>Compiling monthly, weekly, daily reports. WIP</li>
+                    <li ng-repeat="f in p.functions">{{f}}</li>
                 </ul>
-                <p>Built with AngularJS, Bootstrap CSS, Angular Bootstrap, and Firebase.</p>
-            </div>
-            <div class="col-xs-5">
-                <img src="" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-7">
-                <h4>Yippee</h4>
-                <p>A mobile (Android and iOS) application that promotes a healthy lifestyle by encouraging students to schedule regular breaks in their busy study schedules.</p>
-                <ul>
-                    <li>Set a study schedule with regular break intervals and lengths</li>
-                    <li>Automatically change phone ringer mode</li>
-                    <li>Notify user to take a break</li>
-                    <li>Utilize user's geolocation to query Yelp API for nearby businesses</li>
-                    <li>Create user accounts and add friends to view their statuses</li>
-                    <li>Send messages to friends</li>
-                    <li>Share businesses with friends</li>
-                </ul>
-                <p>Built with Ionic framework, Cordova plugins, Ionic material CSS, Yelp API, OpenStreetMap, Firebase.
-                    <br>Tested using Karma with Jasmine, automated on TravisCI.</p>
-            </div>
-            <div class="col-xs-5">
-                <img src="" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-7">
-                <h4>NHLCap</h4>
-                <p>A simple web database application for viewing the cap salaries of players in the NHL.
-                    <br> Built with AngularJS, PHP, and MySQL.</p>
+                <p>{{p.built}} <br ng-if="p.tested"> {{p.tested}}</p>
             </div>
             <div class="col-xs-5">
                 <img src="" />
@@ -141,31 +108,16 @@
     <h2 class="text-center heading">Work Experience</h2>
     <div class="container">
         <div class="col-xs-6">
-            <div class="row">
-                <h4>Tutor & Developer @ Datapi Learning Centre
-                    <a href="http://www.datapi.com">
+            <div class="row" ng-repeat="e in experiences">
+                <h4>{{e.job}}
+                    <a href="{{e.url}}">
                         <span class="glyphicon glyphicon-share link-out"></span>
                     </a>
                 </h4>
-                <h6>772 Kingsway, Vancouver, BC</h6>
-                <h6>September, 2015 to Present</h6>
+                <h6>{{e.address}}</h6>
+                <h6>{{e.duration}}</h6>
                 <ul>
-                    <li>Tutoring students K-12 1-on-1 or 1-on-2</li>
-                    <li>Developing a web application for managing clients</li>
-                    <li>Making incremental changes on currently existing software system</li>
-                </ul>
-            </div>
-            <div class="row">
-                <h4>Lab Volunteer @ Rideout Lab
-                    <a href="http://rideoutlab.weebly.com/">
-                        <span class="glyphicon glyphicon-share link-out"></span>
-                    </a>
-                </h4>
-                <h6>2350 Health Sciences Mall, Vancouver, BC</h6>
-                <h6>August, 2015 to Present</h6>
-                <ul>
-                    <li>Regular housekeeping tasks</li>
-                    <li>Developing R scripts to process RNAseq data</li>
+                    <li ng-repeat="j in e.jobs">{{j}}</li>
                 </ul>
             </div>
         </div>

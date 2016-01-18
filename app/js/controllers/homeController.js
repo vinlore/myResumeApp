@@ -100,4 +100,62 @@ angular.module('home.ctrl', [])
 		anchorSmoothScroll.scrollTo(id);
 	}
 
+	$scope.projects = [
+		{
+			name: "Datapi Registration App",
+			description: "A web application designed for managing student registration and payments",
+			functions: [
+				"Register new clients to the database",
+                "Make and edit payments in the database",
+                "Make changes to existing client information",
+                "Compiling monthly, weekly, daily reports. WIP"
+			],
+			built: "Built with AngularJS, Bootstrap CSS, Angular Bootstrap, and Firebase"
+		},
+		{
+			name: "Yippee",
+			description: "A mobile (Android and iOS application that promotes a helathy lifestyle by encouraging students to schedule regular breaks in their busy study schedules.",
+			functions: [
+				"Set a study schedule with regular break intervals and lengths",
+                "Automatically change phone ringer mode",
+                "Notify user to take a break",
+                "Utilize user's geolocation to query Yelp API for nearby businesses",
+                "Create user accounts and add friends to view their statuses",
+                "Send messages to friends",
+                "Share businesses with friends"
+			],
+			built: "Built with Ionic framework, Cordova plugins, Ionic material CSS, Yelp API, OpenStreetMap, Firebase.",
+			tested: "Tested using Karma with Jasmine, automated on TravisCI."
+		},
+		{
+			name: "NHLCap",
+			description: "A simple web database applicaiton for viewing the cpa salaries of players in the NHL.",
+			built: "Built with AngularJS, PHP, and MySQL."
+		}
+	]
+
+	$scope.experiences = [
+		{
+			job: "Tutor & Developer @ Datapi Learning Centre",
+			url: "http://www.datapi.com",
+			address: "772 Kingsway, Vancouver, BC",
+			duration: "September 2015 to Present",
+			jobs: [
+				"Tutoring students K to 12 (1-on-1 or 1-on-2)",
+				"Developing a web application for managing clients",
+				"Making incremental changes on a currently existing software system"
+			]
+		},
+		{
+			job: "Lab Volunteer @ Rideout Lab",
+			url: "http://rideoutlab.weebly.com",
+			address: "2350 Health Sciences Mall, Vancouver, BC",
+			duration: "August 2015 to Present",
+			jobs: [
+				"Regular housekeeping tasks",
+				"Developing R scripts to process RNAseq data"
+			]
+		}
+	];
+
 });
