@@ -1,3 +1,15 @@
+@media (max-width: 768px) {
+	h2 {
+		font-size: 30px !important;
+	}
+	h6 {
+		font-size: 12px !important;
+	}
+	h4 {
+		font-size: 18px !important;
+	}
+}
+
 .center {
 	display: flex;
 	justify-content: center;
@@ -152,4 +164,8 @@ tbody > tr:first-of-type > td {
 
 .carousel .carousel-control {
 	background-image: none !important;
+}
+
+#portfolio .row {
+	margin-bottom: 20px;
 }

@@ -27,11 +27,11 @@
     <h2 class="text-center heading">Technical</h2>
     <div class="container">
         <div class="row">
-            <div class="col-xs-6">
+            <div class="col-md-6">
                 <h3>Languages</h3>
                 <div ng-repeat="language in languages">{{language}}</div>
             </div>
-            <div class="col-xs-6">
+            <div class="col-md-6">
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@
     <h2 class="text-center heading">Education</h2>
     <div class="container">
         <div class="row">
-            <div class="col-xs-6">
+            <div class="col-md-6">
                 <div class="row">
                     <div class="col-xs-3">
                         <img class="img-responsive" src="assets/img/ubc.png" />
@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6">
+            <div class="col-md-6">
                 <div class="container-fluid">
                     <input type="text" placeholder="Search courses" class="form-control" ng-model="filterCourse">
                     <uib-tabset>
@@ -90,7 +90,7 @@
     <h2 class="text-center heading">Portfolio</h2>
     <div class="container">
         <div class="row" ng-repeat="p in projects">
-            <div class="col-xs-6">
+            <div class="col-md-6">
                 <h4>{{p.name}}</h4>
                 <p>{{p.description}}</p>
                 <ul>
@@ -98,7 +98,7 @@
                 </ul>
                 <p>{{p.built}} <br ng-if="p.tested"> {{p.tested}}</p>
             </div>
-            <div class="col-xs-6">
+            <div class="col-md-6">
                 <uib-carousel>
                     <uib-slide ng-repeat="img in p.images">
                         <img ng-src="{{img}}">
@@ -111,7 +111,7 @@
 <div class="container-blue" id="experience">
     <h2 class="text-center heading">Work Experience</h2>
     <div class="container">
-        <div class="col-xs-6">
+        <div class="col-md-6">
             <div class="row" ng-repeat="e in experiences">
                 <h4>{{e.job}}
                     <a href="{{e.url}}">
