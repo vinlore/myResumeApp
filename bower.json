@@ -11,6 +11,7 @@
     "angular-mocks": "~1.4.0",
     "angular-animate": "~1.4.8",
     "bootswatch-dist": "paper",
-    "angular-bootstrap": "~1.1.0"
+    "angular-bootstrap": "~1.1.0",
+    "Ionicons": "ionicons#~2.0.1"
   }
 }

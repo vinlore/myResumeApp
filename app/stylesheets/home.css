@@ -81,6 +81,11 @@ a:link {
 	color: white;
 }
 
+.container-gray {
+	background-color: #A8A9AD;
+	padding: 5px 0px;
+}
+
 .heading {
 	margin-bottom: 18px;
 }
@@ -168,4 +173,17 @@ tbody > tr:first-of-type > td {
 
 #portfolio .row {
 	margin-bottom: 20px;
+}
+
+footer ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding-left: 5px;
+}
+
+footer .btn-lg {
+	font-size: 35px;
+	padding: 0px 10px;
 }
