@@ -51,7 +51,7 @@ a:link {
 }
 
 #profile {
-	background: url('/assets/vancouver.jpg');
+	background: url('/assets/img/vancouver.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	margin-bottom: 0;
@@ -142,4 +142,14 @@ tbody > tr:first-of-type > td {
 	font-size: 15px;
 	top: -1px;
 	margin-left: 5px;
+}
+
+.carousel img {
+	margin: auto;
+	height: 400px !important;
+	max-width: none !important;
+}
+
+.carousel .carousel-control {
+	background-image: none !important;
 }

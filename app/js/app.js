@@ -4,7 +4,8 @@ angular.module('myResumeApp', [
     'ngRoute',
     'ui.bootstrap',
     'home.ctrl',
-    'scrolling'
+    'scrolling',
+    'ngAnimate'
 ])
 
 .config(function($routeProvider, $locationProvider) {
@@ -12,7 +13,7 @@ angular.module('myResumeApp', [
     $routeProvider
         .when('/', {
             controller: 'homeController',
-            templateUrl: 'templates/home.html'
+            templateUrl: 'views/home.html'
         })
 
     .otherwise({

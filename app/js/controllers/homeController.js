@@ -110,7 +110,15 @@ angular.module('home.ctrl', [])
                 "Make changes to existing client information",
                 "Compiling monthly, weekly, daily reports. WIP"
 			],
-			built: "Built with AngularJS, Bootstrap CSS, Angular Bootstrap, and Firebase"
+			built: "Built with AngularJS, Bootstrap CSS, Angular Bootstrap, and Firebase",
+			images: [
+				"assets/img/datapi/home.png",
+				"assets/img/datapi/home2.png",
+				"assets/img/datapi/payment.png",
+				"assets/img/datapi/admin.png",
+				"assets/img/datapi/adminSearch.png",
+				"assets/img/datapi/student.png"
+			]
 		},
 		{
 			name: "Yippee",
@@ -125,7 +133,20 @@ angular.module('home.ctrl', [])
                 "Share businesses with friends"
 			],
 			built: "Built with Ionic framework, Cordova plugins, Ionic material CSS, Yelp API, OpenStreetMap, Firebase.",
-			tested: "Tested using Karma with Jasmine, automated on TravisCI."
+			tested: "Tested using Karma with Jasmine, automated on TravisCI.",
+			images: [
+				"assets/img/yippee/studyhome.png",
+				"assets/img/yippee/studyinput.png",
+				"assets/img/yippee/studytimer.png",
+				"assets/img/yippee/breaknotification.png",
+				"assets/img/yippee/breaktimer.png",
+				"assets/img/yippee/breakhome.png",
+				"assets/img/yippee/breaklist.png",
+				"assets/img/yippee/breakdetail.png",
+				"assets/img/yippee/friends.png",
+				"assets/img/yippee/chatrooms.png",
+				"assets/img/yippee/chat.png"
+			]
 		},
 		{
 			name: "NHLCap",
