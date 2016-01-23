@@ -1,6 +1,8 @@
 angular.module('home.ctrl', [])
 .controller('homeController', function($scope, anchorSmoothScroll, filterFilter) {
 
+	$scope.isCollapsed = true;
+
 	$scope.languages = [
 		'HTML/CSS', 'Javascript', 'Java', 'SQL', 'Matlab', 'R', 'C++', 'PHP', 'Python' 
 	];
@@ -98,6 +100,7 @@ angular.module('home.ctrl', [])
 
 	$scope.gotoElement = function(id) {
 		anchorSmoothScroll.scrollTo(id);
+		if (!$scope.isCollapsed) $scope.isCollapsed = true;
 	}
 
 	$scope.projects = [
@@ -176,6 +179,39 @@ angular.module('home.ctrl', [])
 				"Regular housekeeping tasks",
 				"Developing R scripts to process RNAseq data"
 			]
+		}
+	];
+
+	$scope.contactDetails = [
+		{
+			icon: "ion-android-mail",
+			url: "mailto:vincent_lore@hotmail.com",
+			text: "vincent_lore@hotmail.com"
+		},
+		{
+			icon: "ion-social-google",
+			url: "mailto:vincentlore93@gmail.com",
+			text: "vincentlore93@gmail.com"
+		},
+		{
+			icon: "ion-social-github",
+			url: "https://github.com/vinlore",
+			text: "Github"
+		},
+		{
+			icon: "ion-social-linkedin-outline",
+			url: "https://www.linkedin.com/in/vincent-lore-080729ba",
+			text: "LinkedIn"
+		},
+		{
+			icon: "ion-social-facebook",
+			url: "https://www.facebook.com/vincentlore93",
+			text: "Facebook"
+		},
+		{
+			icon: "ion-social-skype",
+			url: "skype:vincentlore?chat",
+			text: "vincentlore"
 		}
 	];
 

@@ -4,9 +4,12 @@ angular.module('scrolling', [])
 	
 	this.scrollTo = function(id) {
 		var elm = document.getElementById(id); // element to scroll to
-		var navbar = document.getElementById('navbar'); // navbar
+		var navbar = document.getElementById('big-navbar'); // navbar
 		var navoff = navbar.clientHeight; // navbar height
-		var yoff = elm.offsetTop - navoff; // position to scroll to with navbar 
+		var navbar2 = document.getElementById('mini-navbar'); // mini-navbar
+		var menu = document.getElementById('collapsed-menu');
+		var navoff2 = navbar2.clientHeight - menu.clientHeight; // mini-navbar height
+		var yoff = elm.offsetTop - (navoff + navoff2); // position to scroll to with navbar 
 		var curpos = window.pageYOffset; // current position in browser
 		var distance = (yoff > curpos) ? yoff-curpos : curpos-yoff; // distance to scroll
 

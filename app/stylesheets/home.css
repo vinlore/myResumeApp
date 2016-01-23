@@ -32,21 +32,25 @@
 	font-size: 30px !important;
 }
 
-.navbar-nav {
+.has-header {
+	margin-top: 64px;
+}
+
+#big-navbar .navbar-nav {
 	display: flex;
 	align-items: center;
 }
 
-.navbar-nav li {
+#big-navbar .navbar-nav li {
 	border-bottom: 4px solid transparent;
 }
 
-.navbar-nav li:hover {
+#big-navbar .navbar-nav li:hover {
 	border-bottom: 4px solid #047A4A;
 	/*border-bottom: 3px solid #99ccff;*/
 }
 
-.navbar-nav li a {
+#big-navbar .navbar-nav li a {
 	margin: 0 !important;
 }
 
@@ -175,15 +179,30 @@ tbody > tr:first-of-type > td {
 	margin-bottom: 20px;
 }
 
-footer ul {
-	list-style: none;
-	display: flex;
-	flex-direction: row;
-	margin: 0;
-	padding-left: 5px;
+footer .container {
+	padding: 0px 55px;
 }
 
-footer .btn-lg {
-	font-size: 35px;
-	padding: 0px 10px;
+footer .col-xs-1 {
+	padding: 0;
+	width: 30px;
+	text-align: center;
+}
+
+footer .row {
+	display: flex;
+	align-items: center;
+	margin-bottom: -10px;
+}
+
+footer .row:last-child {
+	margin-bottom: 0px;
+}
+
+footer a {
+	color: gray;
+}
+
+footer .icon {
+	font-size: 25px;
 }
