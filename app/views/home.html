@@ -63,9 +63,16 @@
         <div class="row">
             <div class="col-md-6">
                 <h3>Languages</h3>
-                <div ng-repeat="language in languages">{{language}}</div>
+                <div ng-repeat="p in programming">
+                    <label>{{p.lang}}</label>
+                    <uib-progressbar class="progress-striped active" value="p.exp"></uib-progressbar>
+                </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 text-right">
+                <h3>Laboratory</h3>
+                <div ng-repeat="l in laboratory">
+                    {{l}}
+                </div>
             </div>
         </div>
     </div>
@@ -84,7 +91,7 @@
                         <h6>Bachelor of Science</h6>
                         <h6>Major in Biochemistry</h6>
                         <h6>Major in Computer Science</h6>
-                        <p>September 2011 to May 2016 (Expected)</p>
+                        <h6>September 2011 to May 2016 (Expected)</h6>
                     </div>
                 </div>
             </div>
@@ -175,9 +182,9 @@
             </div>
         </div>
         <div class="col-md-6">
-            <h6>Made by Vincent Lore.</h6>
-            <h6>Code released under the <a>MIT License</a>.</h6>
-            <h6>Designed with <a>Bootstrap</a>, using <a>Glyphicons</a> and <a>Ionicons</a></h6>
+            <h6>Designed and built by Vincent Lore.</h6>
+            <h6>Built with <a href="http://getbootstrap.com">Bootstrap</a> using <a href="http://bootswatch.com/paper/">Bootswatch Paper</a> theme.</h6>
+            <h6>Icons from <a href="http://glyphicons.com/">Glyphicons</a> and <a href="http://ionicons.com/">Ionicons</a>.</h6>
         </div>
     </div>
 </footer>

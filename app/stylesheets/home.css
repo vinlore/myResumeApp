@@ -59,9 +59,17 @@ body {
 	/*border-bottom: 3px solid #99ccff;*/
 }
 
-#big-navbar .navbar-nav li a {
+.navbar-nav li a {
 	margin: 0 !important;
+	color: white !important;
+}
+
+#mini-navbar .navbar-brand {
 	color: white;
+}
+
+#mini-navbar .navbar-collapse {
+	border: 0;
 }
 
 a:hover {
@@ -113,6 +121,10 @@ a:link {
 	margin-bottom: 25px;
 }
 
+h3, h4 {
+	margin-top : 0px;
+}
+
 .container-blue h1, 
 .container-blue h2,
 .container-blue h3,
@@ -120,10 +132,6 @@ a:link {
 .container-blue h5,
 .container-blue h6 {
 	color: white;
-}
-
-#education h4 {
-	margin-top: 10px;
 }
 
 .form-control {
@@ -230,4 +238,9 @@ footer a:hover {
 
 footer .icon {
 	font-size: 25px;
+}
+
+.progress {
+	height: 10px !important;
+	margin-bottom: 5px;
 }

@@ -5,8 +5,47 @@ angular.module('home.ctrl', [])
 
 	$scope.profile = "I'm Vincent, an upper level undergraduate student at UBC expecting to graduate this May with a double major in Computer Science and Biochemistry. As an upcoming new graduate, I'm currently actively seeking job opportunities in the tech sector."
 
-	$scope.languages = [
-		'HTML/CSS', 'Javascript', 'Java', 'SQL', 'Matlab', 'R', 'C++', 'PHP', 'Python' 
+	$scope.programming = [
+		{
+			lang: "HTML/CSS",
+			exp: 100
+		},
+		{
+			lang: "Javascript",
+			exp: 100
+		},
+		{
+			lang: "SQL",
+			exp: 100
+		},
+		{
+			lang: "PHP",
+			exp: 75
+		},
+		{
+			lang: "Java",
+			exp: 75
+		},
+		{
+			lang: "C++",
+			exp: 50
+		},
+		{
+			lang: "Matlab",
+			exp: 25
+		},
+		{
+			lang: "R",
+			exp: 25
+		},
+		{
+			lang: "Erlang",
+			exp: 10
+		},
+		{
+			lang: "Python",
+			exp: 10
+		}
 	];
 
 	$scope.laboratory = [
