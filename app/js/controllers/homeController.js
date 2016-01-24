@@ -1,9 +1,11 @@
+'use strict';
+
 angular.module('home.ctrl', [])
 .controller('homeController', function($scope, anchorSmoothScroll, filterFilter) {
 
 	$scope.isCollapsed = true;
 
-	$scope.profile = "I'm Vincent, an upper level undergraduate student at UBC expecting to graduate this May with a double major in Computer Science and Biochemistry. As an upcoming new graduate, I'm currently actively seeking job opportunities in the tech sector."
+	$scope.profile = "I'm Vincent, an upper level undergraduate student at UBC expecting to graduate this May with a double major in Computer Science and Biochemistry. As an upcoming new graduate, I'm currently actively seeking job opportunities in the tech sector.";
 
 	$scope.programming = [
 		{
@@ -142,7 +144,7 @@ angular.module('home.ctrl', [])
 	$scope.gotoElement = function(id) {
 		anchorSmoothScroll.scrollTo(id);
 		if (!$scope.isCollapsed) $scope.isCollapsed = true;
-	}
+	};
 
 	$scope.projects = [
 		{
@@ -197,7 +199,7 @@ angular.module('home.ctrl', [])
 			description: "A simple web database applicaiton for viewing the cpa salaries of players in the NHL.",
 			built: "Built with AngularJS, PHP, and MySQL."
 		}
-	]
+	];
 
 	$scope.experiences = [
 		{

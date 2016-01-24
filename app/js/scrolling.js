@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('scrolling', [])
 
 .service('anchorSmoothScroll', function() {
@@ -49,6 +51,6 @@ angular.module('scrolling', [])
 		function stepTo(step) {
 			window.scrollTo(0, step);
 		}
-	}
+	};
 
-})
+});

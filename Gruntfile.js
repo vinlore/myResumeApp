@@ -9,7 +9,10 @@ module.exports = function(grunt) {
 				globalstrict: true,
 				globals: {
 					angular: true,
-					module: true
+					module: true,
+					document: true,
+					window: true,
+					setTimeout: true
 				}
 			}
 		}
