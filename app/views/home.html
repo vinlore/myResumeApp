@@ -143,7 +143,7 @@
             <div class="col-md-6">
                 <uib-carousel>
                     <uib-slide ng-repeat="img in p.images">
-                        <img ng-src="{{img}}">
+                        <img ng-src="{{img}}" ng-click="popup(p.images)">
                     </uib-slide>
                 </uib-carousel>
             </div>
@@ -165,6 +165,7 @@
                 <ul>
                     <li ng-repeat="j in e.jobs">{{j}}</li>
                 </ul>
+                <br>
             </div>
         </div>
     </div>

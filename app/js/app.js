@@ -4,6 +4,7 @@ angular.module('myResumeApp', [
     'ngRoute',
     'ui.bootstrap',
     'home.ctrl',
+    'portfolioModal.ctrl',
     'scrolling',
     'ngAnimate'
 ])

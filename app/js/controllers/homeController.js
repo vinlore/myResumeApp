@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('home.ctrl', [])
-.controller('homeController', function($scope, anchorSmoothScroll, filterFilter) {
+.controller('homeController', function($scope, anchorSmoothScroll, filterFilter, $uibModal) {
 
 	$scope.isCollapsed = true;
 
@@ -257,5 +257,17 @@ angular.module('home.ctrl', [])
 			text: "vincentlore"
 		}
 	];
+
+	$scope.popup = function(images) {
+		var modalInstance = $uibModal.open({
+			templateUrl: 'views/portfolioModal.html',
+			controller: 'portfolioModalController',
+			resolve: {
+				images: function() {
+					return images;
+				}
+			}
+		})
+	};
 
 });
