@@ -1,0 +1,36 @@
+<ion-view view-title="Businesses">
+    <ion-content class="has-header">
+        <ion-list class="animate-ripple">
+            <ion-item ng-if="results.businesses.length == 0">
+                <p>No Results Found</p>
+            </ion-item>
+            <ion-item ng-repeat="business in results.businesses">
+                <a class="item item-avatar" on-tap="navToBusiness(business)">
+                    <img class="business-image" ng-src="{{ business.image_url }}">
+                    <h2>{{ business.name }}</h2>
+                    <div class="stars">
+                        <div ng-repeat="star in [1,2,3,4,5]">
+                            <div ng-switch="business.rating >= star">
+                                <div ng-switch-when="true">
+                                    <i class="icon ion-ios-star"></i>
+                                </div>
+                                <div ng-switch-when="false">
+                                    <div ng-switch="business.rating > (star-1)">
+                                        <div ng-switch-when="true">
+                                            <i class="icon ion-ios-star-half"></i>
+                                        </div>
+                                        <div ng-switch-when="false">
+                                            <i class="icon ion-ios-star-outline"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>{{ business.review_count }} Ratings</p>
+                    <p>{{ business.location.neighborhoods[0] }}</p>
+                </a>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

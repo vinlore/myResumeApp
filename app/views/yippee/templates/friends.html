@@ -1,0 +1,26 @@
+<ion-view view-title="Friends" id="friends-view">
+  <ion-nav-buttons side="left">
+	<button class="button button-clear button-icon ion-log-out" ng-show="authData" ng-click= "logout()"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+	<button ng-click="addedMeModal.show()" class="button button-clear button-icon ion-person-stalker" ng-show="authData">{{friendReqs.length}}</button>
+	<button class="button button-clear button-icon ion-person-add" ng-show="authData" ng-click= "addFriendsModal.show()"></button>
+    </ion-nav-buttons>
+  <!-- User is logged in, display friend list and options -->
+  <ion-content ng-show="authData">
+    <ion-list can-swipe="listCanSwipe">
+	 <ion-item ng-if="friends.length == 0">
+            <p>You have no friends.</p> 
+			</ion-item>
+      <ion-item class="item-divider item-icon-right" ng-repeat="friend in friends" type="item-text-wrap" ng-click="openChatroom(friend)">
+      <i class="icon ion-ios-chatbubble"></i>
+        <h2>{{friend.friendDispName}}</h2>
+		<h3>{{friend.friendStatus}}</h3>
+		<ion-option-button class="button-assertive" ng-click="deleteFriend(friend)">Delete?</ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+<!-- User is NOT logged in, display login prompt -->
+<ion-view ng-hide="authData" ng-include="'templates\\login.html'">
+</ion-view>

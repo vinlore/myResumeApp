@@ -15,6 +15,10 @@ body {
 	h4 {
 		font-size: 18px !important;
 	}
+
+	#mini-navbar .navbar-collapse {
+		margin-top: 64px !important;
+	}
 }
 
 .navbar-inverse {
@@ -36,16 +40,16 @@ body {
 }
 
 .navbar-text {
-	font-size: 18px !important;
+	font-size: 17px !important;
 }
 
 .navbar-title {
 	text-transform: none !important;
-	font-size: 35px !important;
+	font-size: 30px !important;
 }
 
 .has-header {
-	margin-top: 64px;
+	margin-top: 64px !important;
 }
 
 #big-navbar .navbar-nav {
@@ -73,6 +77,7 @@ body {
 
 #mini-navbar .navbar-collapse {
 	border: 0;
+	margin-top: 0;
 }
 
 a:hover {
@@ -250,18 +255,11 @@ footer .icon {
 
 .modal-dialog {
 	width: 90%;
-	height: 90%;
 }
 
-.modal-content,
-.modal-body,
-.modal-body .carousel,
-.modal-body .carousel-inner {
-	height: 100%;
-}
 
 .modal-body img {
 	margin: auto;
-	width: auto;
+	max-width: 100%;
 	max-height: 100%;
 }

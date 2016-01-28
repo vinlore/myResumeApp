@@ -1,0 +1,33 @@
+@media (max-height: 667px) {
+	#yippee .frame-container {
+		justify-content: initial !important;
+	}
+
+}
+
+@media (max-width: 375px) {
+	#yippee .frame-container {
+		align-items: initial !important;
+	}
+
+}
+
+#yippee .frame-container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#yippee .frame {
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+	min-height: 667px;
+	min-width: 375px;
+}
+
+#yippee .btn-link:hover {
+	background-color: transparent !important;
+}

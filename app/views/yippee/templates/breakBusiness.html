@@ -1,0 +1,37 @@
+<ion-view view-title="{{ business.details.name }}">
+    <ion-content>
+        <div class="list card">
+            <div class="item item-avatar business-header">
+                <img ng-src="{{ business.details.image_url }}">
+                <h2>{{ business.details.name }}</h2>
+                <img class="yelp-ratings" ng-src="{{ business.details.rating_img_url }}">
+                <p class="business-review-count">{{ business.details.review_count }} reviews</p>
+                <p>{{ business.details.display_phone }}</p>
+            </div>
+            <div class="item item-body">
+                <ui-gmap-google-map center='map.center' zoom='map.zoom' ng-if="map">
+                    <ui-gmap-marker
+                        idKey='map.marker.idKey'
+                        coords='map.marker.coords'
+                        options='map.marker.options'
+                        >
+                    </ui-gmap-marker>
+                </ui-gmap-google-map>
+                <p ng-if="business.details.distance">
+                    Distance from your location: {{ business.details.distance | distance }}
+                </p>
+            </div>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" on-tap="showConfirm(business)">
+                  <i class="icon ion-thumbsup"></i>
+                  Break Here
+                </a>
+                <a class="tab-item" on-tap="openShareModal()">
+                  <i class="icon ion-share"></i>
+                  Share
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+

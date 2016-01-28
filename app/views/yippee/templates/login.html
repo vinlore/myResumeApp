@@ -1,0 +1,27 @@
+<ion-content class="padding">
+  <div>
+    <div class="list">
+      <div class="logoText">
+        You must be logged in to use this feature.
+      </div>
+    </div>
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="text" ng-model="user.email">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" ng-model="user.pwdForLogin">
+      </label>
+      <button ng-click="signIn(user)" class="button button-block button-positive">
+        Sign In
+      </button>
+    </div>
+    <div class="list create-account">
+      <button ng-click="modal.show()" class="button button-small button-stable">
+        Create New Account
+      </button>
+    </div>
+  </div>
+</ion-content>

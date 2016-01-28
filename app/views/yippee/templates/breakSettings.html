@@ -1,0 +1,25 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Settings</h1>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-divider"> 
+                Distance (Meters)
+            </ion-item>
+            <ion-item class="range range-positive">
+                <i class="icon ion-location"></i>
+                <input type="range" min="100" max="40000" ng-model="settings.distance" value="{{ settings.distance }}">
+                <i class="icon ion-ios-location"></i>
+            </ion-item>
+            <p>Distance: {{ settings.distance }}</p>
+            <ion-item class="item-divider"> 
+                Sort By
+            </ion-item>
+            <ion-radio-fix ng-model="sorting" value="1">Distance</ion-radio-fix>
+            <ion-radio-fix ng-model="sorting" value="2">Highest Rated</ion-radio-fix>
+        </ion-list>
+
+        <button class="button button-full button-energized" on-tap="updateSettings(settings.distance, sorting)">Done</button>
+    </ion-content>
+</ion-modal-view>

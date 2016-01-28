@@ -1,0 +1,20 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-calm">
+        <button class="button button-clear button-icon ion-ios-arrow-back" ng-click="closeShareModal()"></button>
+        <h1 class="title">Share Break Location</h1>
+        <button class="button button-clear button-icon ion-share share" ng-click="shareBreakLocation()"></button>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="list">
+            <li class="item item-checkbox" ng-repeat="friend in friends" >
+                <label class="checkbox">
+                    <input type="checkbox" ng-click="friendSelected(friend)">
+                </label>
+                {{friend.friendDispName}}
+            </li>
+            <li class="item item-checkbox" ng-if="!friends" >
+                Please login to see friends!
+            </li>
+        </div>
+    </ion-content>
+</ion-modal-view>

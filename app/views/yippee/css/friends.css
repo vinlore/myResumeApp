@@ -1,0 +1,8 @@
+#friends-view .item.item-divider {
+	height: 100% !important;
+}
+
+#friends-view .item-content {
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+}

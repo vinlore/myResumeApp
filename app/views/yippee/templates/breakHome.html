@@ -1,0 +1,34 @@
+<ion-view view-title="Break">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-android-settings" on-tap="openSettingsModal()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list class="has-header">
+            <div class="search-bar">
+                <label class="item item-input">
+                    <input type="text" placeholder="Search" ng-model="searchTerm">
+                    <a on-tap="generalSearch(searchTerm)"><i class="icon ion-search search-icon"></i></a>
+                </label>
+            </div>
+        </ion-list>
+        <div class="list condensed-space no-padding">
+            <div class="card dark-bg category">
+                <a class="item clear-bg item-bg-image category" on-tap="friendsLastBreakLocations()">
+                    <h2>Friend's Favorites</h2>
+                    <p>Check out where your friends are going</p>
+                    <img src="img/friends.jpg">
+                </a>
+            </div>
+            <div class="card dark-bg category" ng-repeat="category in categories">
+                <a class="item clear-bg item-bg-image category" on-tap="categoryRetrieve(category)">
+                    <h2>{{ category.title }}</h2>
+                    <p>{{ category.subtitle }}</p>
+                    <img ng-src="img/{{ category.img }}">
+                </a>
+            </div>
+            <button id="fab" class="button button-assertive button-fab button-fab-bottom-right" on-tap="updateUserLocation()"><i class="icon ion-android-locate"></i></button>
+        </div>
+        <!-- <button class="button full button-flat button-assertive" on-tap="updateUserLocation()">Refresh Location</button> -->
+        <!-- <button id="fab" class="button button-assertive button-fab button-fab-bottom-right" on-tap="updateUserLocation()"><i class="icon ion-android-locate"></i></button> -->
+    </ion-content>
+</ion-view>

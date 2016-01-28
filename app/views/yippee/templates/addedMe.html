@@ -1,0 +1,19 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+        <button class="button button-clear button-icon ion-ios-arrow-back" ng-click="addedMeModal.hide()"></button>
+        <h1 class="title">These People Want Me</h1>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-if="friendReqs.length == 0">
+                <p>You have no friend requests.</p>
+            </ion-item>
+            <ion-item ng-repeat="friendReq in friendReqs" type="item-text-wrap">
+                <h2>{{friendReq.reqEmail}}</h2>
+                <h2> wants to add you!</h2>
+                <button ng-click="acceptRequest(friendReq)" class="button button-clear"><i class="ion-heart padding-right"></i></button>
+                <button ng-click="declineRequest(friendReq)" class="button button-clear"><i class="ion-heart-broken padding-right"></i></button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,55 @@
+<ion-view id="messages-view" view-title="Chat">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-icon ion-person-add" ng-click="addFriendtoChatModal.show()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="left">
+        <button class="button button-clear header-item ion-" ng-click="$ionicGoBack()"><i class="icon ion-ios-arrow-back"></i></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header has-footer" has-bouncing="true" delegate-handle="scroller">
+        <ion-list  bottom chats="chats">
+            <ion-item ng-if="chats.length == 0" class="textCenter">
+                <h4>No messages in this room. Send a message!</h4>
+            </ion-item>
+            <ion-item class="message-wrapper" ng-repeat="chat in chats | orderBy:'createdAt':reverse" type="item-text-wrap">
+                <!-- <h4>{{chat.from}} :</h4>
+                <span am-time-ago="chat.createdAt" class="item-note">
+                </span>
+                <p>{{chat.message}}</p>
+                <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                    Delete
+                </ion-option-button> -->
+                <div ng-if="displayName !== chat.from">
+                    <div class="chat-bubble left">
+                        <div class="message" share msg="chat.message">{{chat.message}}</div>
+                        <div class="message-detail">
+                            <span class="bold">{{chat.from}}.</span>
+                            <span am-time-ago="chat.createdAt"></span>
+                        </div>
+                    </div>
+                </div>
+                <div ng-if="displayName === chat.from">
+                    <div class="chat-bubble right">
+                        <div class="message" share msg="chat.message">{{chat.message}}</div>
+                        <div class="message-detail">
+                            <span class="bold">{{displayName}}.</span>
+                            <span am-time-ago="chat.createdAt"></span>
+                        </div>
+                    </div>
+                </div>
+                <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+    </ion-content>
+    <form ng-submit="addMessage(IM.textMessage)" novalidate>
+        <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
+            <label class="item-input-wrapper">
+                <textarea type="text" ng-model="IM.textMessage" placeholder="Send a message..." required minlength="1" maxlength="500" msd-elastic keep-keyboard-open></textarea>
+            </label>
+            <div class="footer-btn-wrap">
+                <button type="submit" class="button button-icon icon ion-android-send footer-btn" ng-disabled="!IM.textMessage || IM.textMessage===''">
+                </button>
+            </div>
+        </ion-footer-bar>
+    </form>
+</ion-view>

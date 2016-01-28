@@ -26,7 +26,7 @@
         <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="#" ng-click="gotoElement('profile')">Vincent Lore</a>
-    <div class="navbar-collapse has-header" uib-collapse="isCollapsed" id="collapsed-menu">
+    <div class="navbar-collapse" uib-collapse="isCollapsed" id="collapsed-menu">
         <ul class="nav navbar-nav">
             <li>
                 <a href="#" ng-click="gotoElement('technical')">Technical</a>
@@ -132,7 +132,7 @@
     <div class="container">
         <div class="row" ng-repeat="p in projects">
             <div class="col-md-6">
-                <h4>{{p.name}}</h4>
+                <h4>{{p.name}} <span class="icon ion-android-arrow-forward" ng-if="p.name=='Yippee'"> <a href="/yippee">Demo</a></span></h4>
                 <p>{{p.description}}</p>
                 <ul>
                     <li ng-repeat="f in p.functions">{{f}}</li>

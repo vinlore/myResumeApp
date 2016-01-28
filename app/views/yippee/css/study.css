@@ -1,0 +1,151 @@
+.ng-hide.ng-hide-animate{
+     display: none !important;
+}
+
+.container {
+    transform: translateY(7%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrows {
+    width: 100%;
+    padding: 0 !important;
+}
+
+.homeButtons {
+    width: 80% !important;
+}
+
+.inputs {
+    text-align: center;
+    padding-top: 5px;
+    background-color: transparent;
+}
+
+input[type="tel"] {
+    font-size: 20px;
+    border: 1px solid #dddddd;
+}
+
+.inputs:focus {
+    border-bottom: 1px solid #0066FF;
+}
+
+.labels {
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+}
+
+.labels2 {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 45px;
+}
+
+#big {
+    font-size: 6em;
+}
+
+#small {
+    font-size: 0.3em;
+    color: lightgray;
+    margin: 0;
+}
+
+.progress-wrapper {
+    position: relative;
+    text-align: center;
+    width: 80%;
+    transform: translateY(10%);
+    margin-bottom: 60px;
+}
+
+.progress {
+    position: absolute;
+    width: 100%;
+    color: black;
+    line-height: 1;
+    top: 50%;
+    bottom: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+#clock {
+    color: black;
+}
+
+#clock ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 0px;
+    list-style: none;
+}
+
+#clock ul li {
+    font-size: 5em;
+}
+
+.chatbox {
+    position:absolute;
+    bottom: 0px;
+}
+.message-input {
+    margin-top: 10px;
+}
+ 
+.chatbox-container {
+    font-size: 1.2rem;
+    color: rgba(0,0,0,0.8);
+    position:relative;
+    height: 200px;
+    border: 1px solid rgba(0,0,255, 0.2);
+    padding: 10px;
+    line-height: 29px;
+    overflow: hidden;
+}
+
+
+/* Simple Animation */
+
+@-webkit-keyframes mymove {
+    0% {
+        opacity: 1.0;
+        text-shadow: 0 0 20px #00c6ff;
+    }
+    50% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    100% {
+        opacity: 1.0;
+        text-shadow: 0 0 20px #00c6ff;
+    }
+}
+
+@-moz-keyframes mymove {
+    0% {
+        opacity: 1.0;
+        text-shadow: 0 0 20px #00c6ff;
+    }
+    50% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    100% {
+        opacity: 1.0;
+        text-shadow: 0 0 20px #00c6ff;
+    }
+    ;
+}
+
+.popup {
+    width: 75% !important;
+}

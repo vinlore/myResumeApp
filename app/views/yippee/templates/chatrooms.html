@@ -1,0 +1,20 @@
+<ion-view view-title="Chatrooms" id="chatrooms-view" cache-view = "false">
+    <ion-nav-buttons side="left">
+	<button class="button button-clear button-icon ion-log-out" ng-show="authData" ng-click= "logout()"></button>
+    </ion-nav-buttons>
+    <ion-content ng-show="authData" >
+        <ion-list>
+			<ion-item ng-if="chatrooms.length == 0">
+            <p>No chatrooms to display.</p> 
+			</ion-item>
+            <ion-item class="item-icon-right item-divider" ng-repeat="chatroom in chatrooms|orderBy:'-id'" type="item-text-wrap" ng-click="openChatroom(chatroom.id)">
+                <i class ="icon ion-chevron-right"></i>
+                <ion-list ng-repeat="user in chatroom.users|removeOwnName" style="float:left;width:33%">
+                {{user.name}}   
+                </ion-list>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+<ion-view ng-hide="authData" ng-include="'templates\\login.html'">
+</ion-view>

@@ -1,0 +1,8 @@
+#chatrooms-view .item.item-divider {
+	height: 100% !important;
+}
+
+#chatrooms-view .item-content {
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+}

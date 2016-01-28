@@ -17,6 +17,10 @@ angular.module('myResumeApp', [
             templateUrl: 'views/home.html'
         })
 
+        .when('/yippee', {
+            templateUrl: 'views/yippeeDemo.html'
+        })
+
     .otherwise({
         redirectTo: '/'
     });

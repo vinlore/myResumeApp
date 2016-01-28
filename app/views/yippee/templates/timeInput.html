@@ -1,0 +1,62 @@
+<div class="row labels">Study Time</div>
+<div class="row">
+  <div class="col col-20"></div>
+  <div class="col col-25" id="timeInputs">
+    <button class="button button-clear button-small button-dark marginBottom10 arrows" ng-click="inc('h')">
+      <i class="icon ion-ios-arrow-up"></i>
+    </button>
+    <input class="inputs" type="tel" maxlength="2" placeholder="0" ng-model="study.hours"/>
+    <button class="button button-clear button-small button-dark marginTop10 arrows" ng-click="dec('h')">
+      <i class="icon ion-ios-arrow-down"></i>
+    </button>
+  </div>
+  <label class="labels2">H</label>
+  <div class="col col-5"></div>
+  <div class="col col-25">
+    <button class="button button-clear button-small button-dark marginBottom10 arrows" ng-click="inc('m')">
+      <i class="icon ion-ios-arrow-up"></i>
+    </button>
+    <input class="inputs" type="tel" maxlength="2" placeholder="0" ng-model="study.mins"/>
+    <button class="button button-clear button-small button-dark marginTop10 arrows" ng-click="dec('m')">
+      <i class="icon ion-ios-arrow-down"></i>
+    </button>
+  </div>
+  <label class="labels2">M</label>
+  <div class="col col-20"></div>
+</div>
+<div class="row">
+  <div class="col col-50">
+    <div class="row labels">Break Time</div>
+    <div class="row">
+      <div class="col col-25"></div>
+      <div class="col col-50">
+        <button class="button button-clear button-small button-dark marginBottom10 arrows" ng-click="inc('b')">
+          <i class="icon ion-ios-arrow-up"></i>
+        </button>
+        <input class="inputs" type="tel" maxlength="2" placeholder="" ng-model="break.breakLength" />
+        <button class="button button-clear button-small button-dark marginTop10 arrows" ng-click="dec('b')">
+          <i class="icon ion-ios-arrow-down"></i>
+        </button>
+      </div>
+      <label class="col col-25 labels2">M</label>
+    </div>
+  </div>
+  <div class="col col-50">
+    <div class="row labels">Break Every</div>
+    <div class="row">
+      <div class="col col-25"></div>
+      <div class="col col-50">
+        <button class="button button-clear button-small button-dark marginBottom10 arrows" ng-click="inc('e')">
+          <i class="icon ion-ios-arrow-up"></i>
+        </button>
+        <input class="inputs" type="tel" maxlength="2" placeholder="" ng-model="break.breakEvery" />
+        <button class="button button-clear button-small button-dark marginTop10 arrows" ng-click="dec('e')">
+          <i class="icon ion-ios-arrow-down"></i>
+        </button>
+      </div>
+      <label class="col col-25 labels2">M</label>
+    </div>
+  </div>
+</div>
+<p ng-if="error" style="color:red !important; text-align: center;">Check your inputs</p>
+
