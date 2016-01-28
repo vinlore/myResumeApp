@@ -1,6 +1,6 @@
 var app = angular.module('yippee', ['ionic', 'study.controller', 'break.controller', 'login.controller',
   'friends.controller', 'yippee.services', 'yippee.filters', 'firebase', 'uiGmapgoogle-maps', 'ngCordova', 'cordova.custom', 'chat.controller',
-   'chatroom.controller', 'ngIOS9UIWebViewPatch', 'monospaced.elastic', 'angularMoment', 'yippee.directives', 'nemLogging']);
+   'chatroom.controller', 'ngIOS9UIWebViewPatch', 'monospaced.elastic', 'angularMoment', 'yippee.directives']);
 
 var firebaseUrl = "https://vivid-inferno-2137.firebaseio.com/";
 
