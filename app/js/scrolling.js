@@ -20,9 +20,9 @@ angular.module('scrolling', [])
 			window.scrollTo(0, yoff);
 		}
 
-		var speed = Math.round(distance/75); // scroll speed
+		var speed = Math.round(distance/100); // scroll speed, increase makes faster
 		if (speed >= 20) speed = 20; // limit max scroll speed
-		var stepSize = Math.round(distance/50); // step size
+		var stepSize = Math.round(distance/50); // step size, decrease more smooth
 		var step = (yoff > curpos) ? curpos+stepSize : curpos-stepSize; // increment current position by step size
 		var timer = 0; // speed factor
 		var i = curpos;
