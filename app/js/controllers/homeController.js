@@ -5,7 +5,7 @@ angular.module('home.ctrl', [])
 
 	$scope.isCollapsed = true;
 
-	$scope.profile = "I'm Vincent, an upper level undergraduate student at UBC expecting to graduate this May with a double major in Computer Science and Biochemistry. As an upcoming new graduate, I'm currently actively seeking job opportunities in the tech sector.";
+	$scope.profile = "I'm Vincent, an upper level undergraduate student at UBC expecting to graduate this May with a double major in Computer Science and Biochemistry. Over the past year I've been focusing on web development, in particular, with AngularJS and Bootstrap framework. However, I am also proficient in Java. As an upcoming new graduate, I'm actively seeking internship opportunities in the tech sector in front-end development or quality assurance.";
 
 	$scope.programming = [
 		{
