@@ -227,16 +227,6 @@ angular.module('home.ctrl', [])
 
 	$scope.contactDetails = [
 		{
-			icon: "ion-android-mail",
-			url: "mailto:vincent_lore@hotmail.com",
-			text: "vincent_lore@hotmail.com"
-		},
-		{
-			icon: "ion-social-google",
-			url: "mailto:vincentlore93@gmail.com",
-			text: "vincentlore93@gmail.com"
-		},
-		{
 			icon: "ion-social-github",
 			url: "https://github.com/vinlore",
 			text: "Github"
