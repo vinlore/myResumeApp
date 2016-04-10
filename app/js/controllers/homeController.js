@@ -151,9 +151,9 @@ angular.module('home.ctrl', [])
 			name: "Huddle - Conference Management System",
 			description: "A rich web application designed to help the international non-profit learning institute, Gobind Sarvar, manage worldwide conferences.",
 			function: [],
-			built: "",
+			built: "Built with AngularJS and Laravel",
 			images: []
-		}
+		},
 		{
 			name: "Datapi Registration App",
 			description: "A web application designed for managing student registration and payments",
@@ -163,7 +163,7 @@ angular.module('home.ctrl', [])
                 "Make changes to existing client information",
                 "Compiling monthly, weekly, daily reports. WIP"
 			],
-			built: "Built with AngularJS, Bootstrap CSS, Angular Bootstrap, and Firebase",
+			built: "Built with AngularJS and Firebase",
 			images: [
 				"assets/img/datapi/home.png",
 				"assets/img/datapi/home2.png",
