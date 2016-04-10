@@ -148,6 +148,13 @@ angular.module('home.ctrl', [])
 
 	$scope.projects = [
 		{
+			name: "Huddle - Conference Management System",
+			description: "A rich web application designed to help the international non-profit learning institute, Gobind Sarvar, manage worldwide conferences.",
+			function: [],
+			built: "",
+			images: []
+		}
+		{
 			name: "Datapi Registration App",
 			description: "A web application designed for managing student registration and payments",
 			functions: [
